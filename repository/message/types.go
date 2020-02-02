@@ -1,4 +1,4 @@
-package models
+package message
 
 type STATUS string
 type OPERATION string
@@ -38,13 +38,4 @@ type Response struct {
 	Output    string `json:"output"`
 	PKString  string `json:"pk_string"`
 	Signature string `json:"signature"`
-}
-
-type HandleRecord struct {
-	Identifier string `json:"identifier"`
-	Author     string `json:"author"`
-	Repository string `json:"repository"`
-	Timestamp  string `json:"timestamp"`
-	Type       string `json:"type"`
-	Signature  string `json:"signature"`
 }

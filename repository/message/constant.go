@@ -1,4 +1,4 @@
-package models
+package message
 
 const STATUS_SUCESS STATUS = "0.DOIP/Status.001"
 const STATUS_REQUEST_INVALID STATUS = "0.DOIP/Status.101"

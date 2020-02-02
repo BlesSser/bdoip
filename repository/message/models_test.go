@@ -1,11 +1,17 @@
-package models
+package message
 
 import (
 	"encoding/json"
 	"fmt"
 	"testing"
-	"time"
 )
+
+type Father interface {
+}
+
+type Child struct {
+	Name string
+}
 
 func TestDOtoJSON(t *testing.T) {
 
@@ -47,5 +53,15 @@ func TestDOtoJSON(t *testing.T) {
 }
 
 func TestTrifle(t *testing.T) {
-	fmt.Println(time.Now().Second() + time.Now().Nanosecond())
+	c := getChile()
+
+	//d := (Child)(c)
+}
+
+func getChile() Father {
+	return &Child{Name: "111"}
+}
+
+func (c Child) Print() {
+	fmt.Println(c.Name)
 }
